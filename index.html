@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Sadayaro</title>
+  <style>
+    :root {
+      --color-primario: #ff6f61;
+      --color-secundario: #f9f6f2;
+      --color-texto: #4a4a4a;
+      --color-fondo: #ffffff;
+      --color-borde: #ccc;
+      --color-hover: #e65c50;
+      --fuente: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fuente);
+      background: var(--color-secundario);
+      margin: 0;
+      padding: 20px;
+      color: var(--color-texto);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--color-fondo);
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: var(--color-primario);
+    }
+
+    .nav-button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--color-primario);
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background-color: var(--color-hover);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .nav-button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🌟 Bienvenido a Sadayaro</h2>
+    <a href="form_proyecto.html" class="nav-button">📌 Registrar Proyecto</a>
+    <a href="form_donante.html" class="nav-button">🧑 Registrar Donante</a>
+    <a href="form_donacion.html" class="nav-button">💖 Registrar Donación</a>
+    <a href="consulta_avanzada.php" class="nav-button">🧺 Consulta Avanzada</a>
+  </div>
+</body>
+</html>
