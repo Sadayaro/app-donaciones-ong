@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Donación - Sadayaro</title>
+  <style>
+    :root {
+      --color-primario: #ff6f61;
+      --color-secundario: #f9f6f2;
+      --color-texto: #4a4a4a;
+      --color-fondo: #ffffff;
+      --color-borde: #ccc;
+      --color-hover: #e65c50;
+      --fuente: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fuente);
+      background: var(--color-secundario);
+      margin: 0;
+      padding: 20px;
+      color: var(--color-texto);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--color-fondo);
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: var(--color-primario);
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+      font-size: 15px;
+    }
+
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 10px;
+      border: 1px solid var(--color-borde);
+      font-size: 16px;
+      background: #fff;
+      transition: border 0.2s ease;
+    }
+
+    input:focus {
+      border-color: var(--color-primario);
+      outline: none;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      margin-top: 25px;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--color-primario);
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--color-hover);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      button[type="submit"] {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💖 Registrar Donación</h2>
+    <form action="insertar_donacion.php" method="POST">
+      <label for="id_donante">ID del Donante:</label>
+      <input type="number" name="id_donante" id="id_donante" required>
+
+      <label for="id_proyecto">ID del Proyecto:</label>
+      <input type="number" name="id_proyecto" id="id_proyecto" required>
+
+      <label for="monto">Monto a donar (CLP):</label>
+      <input type="number" name="monto" id="monto" min="1000" step="500" placeholder="Ej: 5000" required>
+
+      <label for="fecha">Fecha de la donación:</label>
+      <input type="date" name="fecha" id="fecha" required>
+
+      <button type="submit">Registrar Donación</button>
+    </form>
+  </div>
+</body>
+</html>
